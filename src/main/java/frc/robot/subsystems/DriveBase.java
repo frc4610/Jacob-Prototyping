@@ -30,9 +30,9 @@ public class DriveBase extends Subsystem {
   public void drive (double leftjoy, double rightjoy)
   {
     driveFL.set(ControlMode.PercentOutput , leftjoy);
-    driveFR.set(ControlMode.PercentOutput , leftjoy);
-    driveBL.set(ControlMode.PercentOutput , rightjoy);
-    driveBR.set(ControlMode.PercentOutput , rightjoy);
+    driveFR.set(ControlMode.PercentOutput , -rightjoy);
+    driveBL.set(ControlMode.PercentOutput , leftjoy);
+    driveBR.set(ControlMode.PercentOutput , -rightjoy);
 
   }
   // Put methods for controlling this subsystem

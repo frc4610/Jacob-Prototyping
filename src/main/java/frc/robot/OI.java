@@ -11,8 +11,6 @@ import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 import frc.robot.commands.Climb;
-import frc.robot.commands.TankDrive;
-import frc.robot.subsystems.WinchClimber;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -25,8 +23,8 @@ public class OI {
   public Button CON2 = new JoystickButton(CON,2);
 
   public OI(){ 
-CON1.whileHeld(new Climb(.5));
-CON2.whileHeld(new Climb(-.5));
+CON1.whileHeld(new Climb(1));
+CON2.whileHeld(new Climb(-1));
 }
   
   // One type of button is a joystick button which is any button on a
