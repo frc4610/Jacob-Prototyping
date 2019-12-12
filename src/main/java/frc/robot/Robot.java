@@ -15,6 +15,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.commands.ExampleCommand;
 import frc.robot.commands.TankDrive;
 import frc.robot.subsystems.ExampleSubsystem;
+import frc.robot.subsystems.WinchClimber;
 import frc.robot.subsystems.DriveBase;
 
 /**
@@ -28,6 +29,7 @@ public class Robot extends TimedRobot {
   public static ExampleSubsystem m_subsystem = new ExampleSubsystem();
   public static DriveBase driveBase;
   public static TankDrive tankDrive;
+  public static WinchClimber winchClimber;
   public static OI m_oi;
 
   Command m_autonomousCommand;
@@ -41,6 +43,7 @@ public class Robot extends TimedRobot {
   public void robotInit() {
     driveBase = new DriveBase();
     tankDrive = new TankDrive();
+    winchClimber = new WinchClimber();
     m_oi = new OI();
     m_chooser.setDefaultOption("Default Auto", new ExampleCommand());
     // chooser.addOption("My Auto", new MyAutoCommand());
