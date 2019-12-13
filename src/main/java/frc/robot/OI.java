@@ -19,8 +19,8 @@ import frc.robot.commands.Climb;
 public class OI {
   //// CREATING BUTTONS
   public static Joystick CON = new Joystick(0);
-  public Button CON1 = new JoystickButton(CON, 5);
-  public Button CON2 = new JoystickButton(CON,7);
+  public Button CON1 = new JoystickButton(CON, 6);
+  public Button CON2 = new JoystickButton(CON,5);
 
   public OI(){ 
 CON1.whileHeld(new Climb(1));
